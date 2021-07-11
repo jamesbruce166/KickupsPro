@@ -13,6 +13,8 @@
 		7E1DB7A3269AF22D007E373F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DB7A2269AF22D007E373F /* Assets.xcassets */; };
 		7E1DB7A6269AF22D007E373F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DB7A5269AF22D007E373F /* Preview Assets.xcassets */; };
 		7E1DB7A9269AF22D007E373F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DB7A7269AF22D007E373F /* LaunchScreen.storyboard */; };
+		7E1DB7B3269AF4A0007E373F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DB7B2269AF4A0007E373F /* GameScene.swift */; };
+		7E9CE9D7269B157E0062FAE4 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CE9D6269B157E0062FAE4 /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7E1DB7A5269AF22D007E373F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7E1DB7A8269AF22D007E373F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1DB7AA269AF22D007E373F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E1DB7B2269AF4A0007E373F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		7E9CE9D6269B157E0062FAE4 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				7E1DB79C269AF22B007E373F /* AppDelegate.swift */,
 				7E1DB79E269AF22B007E373F /* SceneDelegate.swift */,
 				7E1DB7A0269AF22B007E373F /* ContentView.swift */,
+				7E9CE9D6269B157E0062FAE4 /* Alerts.swift */,
+				7E1DB7B2269AF4A0007E373F /* GameScene.swift */,
 				7E1DB7A2269AF22D007E373F /* Assets.xcassets */,
 				7E1DB7A7269AF22D007E373F /* LaunchScreen.storyboard */,
 				7E1DB7AA269AF22D007E373F /* Info.plist */,
@@ -146,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1DB79D269AF22B007E373F /* AppDelegate.swift in Sources */,
+				7E9CE9D7269B157E0062FAE4 /* Alerts.swift in Sources */,
 				7E1DB79F269AF22B007E373F /* SceneDelegate.swift in Sources */,
+				7E1DB7B3269AF4A0007E373F /* GameScene.swift in Sources */,
 				7E1DB7A1269AF22B007E373F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +299,7 @@
 				DEVELOPMENT_TEAM = J7YW95EWWV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = KickupsPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erringhambruce.KickupsPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,6 +321,7 @@
 				DEVELOPMENT_TEAM = J7YW95EWWV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = KickupsPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erringhambruce.KickupsPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -6,11 +6,35 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct ContentView: View {
+    @StateObject private var gameScene = GameScene()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            SpriteView(scene: gameScene)
+            
+            VStack (alignment: .leading) {
+                Text("High Score: \(gameScene.highScore)")
+                    .font(.subheadline)
+                    .padding(.leading)
+                    .foregroundColor(.black)
+                
+                Text("Score: \(gameScene.currentScore)")
+                    .font(.largeTitle)
+                    .padding(.leading)
+                    .foregroundColor(.black)
+                
+                Spacer()
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.top, 50)
+        }
+        .ignoresSafeArea()
+        .alert(item: $gameScene.alertItem, content: { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: .default(alertItem.buttonTitle, action: { gameScene.reset() }))
+        })
     }
 }
 
