@@ -25,7 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         physicsBody = border
         
         /// Add gravity to the world
-        physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
+        physicsWorld.gravity = CGVector(dx: 0, dy: -14.8)
         physicsWorld.contactDelegate = self
         
         makeBall()
@@ -34,6 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
         if ball.position.y <= ball.size.height {
+            reset()
             alertItem = AlertContext.gameOver
         }
     }
@@ -58,7 +59,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
                     ball.physicsBody?.affectedByGravity = true
                     
                     /// Because this impulse is applied to a specific point on the object, it may change both the body’s velocity and angular velocity.
-                    ball.physicsBody?.applyImpulse(CGVector(dx: 300 * dx/norm, dy: 500 * dy/norm))
+                    ball.physicsBody?.applyImpulse(CGVector(dx: 300 * dx/norm, dy: 600 * dy/norm))
                     
                     increaseScore()
                     checkHighScore()
@@ -99,7 +100,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     
     func reset() {
         currentScore = 0
-
+        
         ball.position = CGPoint(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/5)
         ball.physicsBody?.affectedByGravity = false
         ball.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
